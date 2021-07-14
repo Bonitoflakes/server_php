@@ -2,7 +2,7 @@
 include_once "config.php";
 echo "<br>";
 echo "<br>";
-
+if (!is_dir('uploads')) mkdir('uploads');
 
 echo "request body: ";
 var_dump($_POST);

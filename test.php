@@ -1,18 +1,13 @@
 <?php
-$folder = 'examples';
+$folder = 'uploads';
 
-// Get the list of all of file names
-// in the folder.
-$files = glob($folder . '/*');
-var_dump($files);
-// Loop through the file list
-foreach($files as $file) {
 
-    // Check for file
-    if(is_file($file)) {
+$id = $_POST['id'];
+$imageToBeRemoved = $_POST['imagepath'];
+$explodedImage = explode('/',$imageToBeRemoved);
 
-        // Use unlink function to
-        // delete the file.
-        unlink($file);
-    }
-}
+//var_dump(str_replace('uploads','',$imageToBeRemoved));
+//print_r(getcwd());
+unlink($imageToBeRemoved);
+rmdir($folder.'/'.$explodedImage[1]);
+header('location:index.php');

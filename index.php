@@ -1,6 +1,6 @@
 <?php /** @noinspection ALL */
 include_once "config.php";
-$sql = 'SELECT * FROM users_profile ORDER BY name';
+$sql = 'SELECT * FROM users_profile ORDER BY id';
 
 $statement = $pdo->query($sql);
 //var_dump($stmt);
@@ -63,7 +63,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
           
           <form method='post' style='display: inline-block' action='deleteUser.php'>
           <input type='hidden' name='id' value=$id>
-          <input type='hidden' name='imagePath' value='$image'>
+          <input type='hidden' name='imagepath' value='$image'>
           <button type='submit' class='btn btn-danger'>Delete</button>
           </form>
           

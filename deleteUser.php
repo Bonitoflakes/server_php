@@ -2,12 +2,17 @@
 include_once "config.php";
 
 $id = $_POST['id'];
+$folder = 'uploads';
 $imageToBeRemoved = $_POST['imagepath'];
-var_dump(is_string($id));
-$statement = "DELETE FROM users_profile WHERE id ='$id'";
-//$statement =  "DELETE FROM `users_profile` WHERE `users_profile`.`id`='19-UCA-003'";
+$explodedImage = explode('/',$imageToBeRemoved);
 
-var_dump($statement);
+//var_dump(str_replace('uploads','',$imageToBeRemoved));
+//print_r(getcwd());
+unlink($imageToBeRemoved);
+rmdir($folder.'/'.$explodedImage[1]);
+
+$statement = "DELETE FROM users_profile WHERE id ='$id'";
+
 
 $pdo->exec($statement);
 echo "User deleted successfully";
