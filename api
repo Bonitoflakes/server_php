@@ -1,0 +1,32 @@
+
+Route
+post
+get id
+get all
+delete amazon.com/jasdf/delete.php
+update amazon.com/jasdf/updateTable.php
+
+
+submit -> userdata -> json conversion -> addresss url -> amazon.com/jasdf/createTable.php
+
+
+php
+
+data retrieve -> validation -> database save
+
+REST api
+
+profile
+
+Objects , arrays , hashmaps
+->         [0]      key value
+
+Name , age , contact , email , achievements [  [ date, name , certificate] ] ,
+responsibilities [ [name , timePeriod ,] ,[name , timePeriod ,] [name , timePeriod ,] [name , timePeriod ,] [name , timePeriod ,] [name , timePeriod ,] ]
+
+achievemnts [id,[ date , name , certificate] ]
+
+
+profile -> update , read , delete , add
+
+

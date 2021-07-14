@@ -1,0 +1,18 @@
+body
+{
+    padding: 5rem;
+    background: black;
+    color: whitesmoke;
+}
+h1{
+    color: whitesmoke;
+}
+table{
+    color: black;
+}
+.customimg{
+    border-radius: 100%!important;
+    width: 75px;
+    height: 75px;
+}
+}
